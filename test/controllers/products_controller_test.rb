@@ -56,6 +56,6 @@ class ProductsControllerTest < ActionController::TestCase
   test "should show New product button" do
     get :index
     assert_response :success
-    assert_select 'a[href=/products/new]', 1
+    assert_select 'a[href="/products/new"]', 1
   end
 end

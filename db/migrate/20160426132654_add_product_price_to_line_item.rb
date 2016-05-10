@@ -3,7 +3,7 @@ class AddProductPriceToLineItem < ActiveRecord::Migration
     add_column :line_items, :price, :decimal
 
     LineItem.all.each do |lineitem|
-    	lineitem.price = lineitem.product.price
+    	lineitem.price = lineitem.get_price
     end
   end
 
